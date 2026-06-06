@@ -13,12 +13,13 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 // ─── Middleware ────────────────────────────────────────────────────────────────
+// Allow all origins so the deployed frontend (Vercel) can reach the backend
+// (Render) without CORS errors regardless of CLIENT_ORIGIN configuration.
 app.use(
   cors({
-    origin: process.env.CLIENT_ORIGIN
-      ? process.env.CLIENT_ORIGIN.split(',').map((o) => o.trim())
-      : '*',
+    origin: true,          // reflect the request origin — works with any domain
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+    credentials: true,
   })
 );
 app.use(express.json());
