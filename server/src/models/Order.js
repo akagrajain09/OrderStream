@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
-/**
- * Order Schema
- * Mirrors the required table definition with snake_case fields.
- * MongoDB stores documents in the 'orders' collection automatically.
- */
+
 const orderSchema = new mongoose.Schema(
   {
     customer_name: {

@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 
 let isConnected = false;
 
-/**
- * Connects to MongoDB using the URI from environment variables.
- * Designed to be called once at startup; subsequent calls are no-ops.
- */
+
 async function connectDB() {
   if (isConnected) return;
 

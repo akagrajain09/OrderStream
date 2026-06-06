@@ -1,6 +1,4 @@
-/**
- * StatusBadge — coloured pill showing an order's status.
- */
+
 export function StatusBadge({ status }) {
   const map = {
     pending: { bg: 'rgba(251,191,36,0.15)', color: '#fbbf24', label: '⏳ Pending' },

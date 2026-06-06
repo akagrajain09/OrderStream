@@ -5,10 +5,7 @@ const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
 const STATUS_OPTIONS = ['pending', 'shipped', 'delivered'];
 
-/**
- * OrderTable — displays the current list of orders.
- * Rows with highlightId flash briefly to indicate a live change.
- */
+
 export function OrderTable({ orders, highlightId, onRefresh }) {
   const [updating, setUpdating] = useState(null);
   const [deleting, setDeleting] = useState(null);

@@ -2,10 +2,7 @@ import { useState } from 'react';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000';
 
-/**
- * OrderForm — create a new order via the REST API.
- * The Change Stream will broadcast the insert back to all clients.
- */
+
 export function OrderForm() {
   const [form, setForm] = useState({ customer_name: '', product_name: '', status: 'pending' });
   const [loading, setLoading] = useState(false);
